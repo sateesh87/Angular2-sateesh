@@ -1,0 +1,38 @@
+<div class='panel panel-primary'>
+  <div class="panel-heading">
+    {{pageTitle}}
+  </div>
+
+  <div class='panel-body'>
+        <div class='table-responsive'>
+
+            <table class='table' *ngIf='products'>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Code</th>
+                        <th>Available</th>
+                    </tr>
+
+                  </thead>
+                  <tbody>
+                      <tr *ngFor='let product of products | async'>
+                          <td>{{product.productName}}</td>
+                          <td>{{product.productCode }}</td>
+                          <td>{{product.releaseDate}}</td>
+                      </tr>
+                  </tbody>
+              </table>
+        </div>
+  </div>
+  <div>
+    {{summary}}
+  </div>
+</div>
+
+<div class='panel panel-primary'>
+    <div class="panel-heading">
+      {{pageTitletwo}}
+    </div>
+    <div>{{details}}</div>
+</div>
